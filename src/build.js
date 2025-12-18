@@ -1,4 +1,4 @@
-const fs = requiere('fs');
+const fs = require('fs');
 const app = require('./app');
 const request = require('supertest');
 
@@ -6,5 +6,5 @@ const request = require('supertest');
     const res = await request(app).get('/');
     fs.mkdirSync('public', { recursive: true });
     fs.writeFileSync('public/index.html', res.text);
-    console.log("tatic HTML generated");
+    console.log("static HTML generated");
 })();
