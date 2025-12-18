@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node src/app.js",
     "test": "jest",
-    "build": "node source/build.js"
+    "build": "node src/build.js"
   },
   "dependencies": {
     "express": "^5.2.1"
