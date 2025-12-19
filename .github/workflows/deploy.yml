@@ -11,8 +11,14 @@ jobs:
         image: redis
         ports:
           - 6379:6379
-          
+
     steps:
+      - name: Istall redis cli
+        run: apt-get update -y && apt-get install -y redis-tools
+
+      - name: Test redis
+        run: redis-cli -h localhost -p 6379 ping
+
       - name: Print variable secret
         run: echo "${{ secrets.TOKEN_SECRET }}"
 
