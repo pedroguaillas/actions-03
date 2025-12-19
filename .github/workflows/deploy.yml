@@ -8,3 +8,8 @@ jobs:
     steps:
       - name: Print variable secret
         run: echo "${{ secrets.TOKEN_SECRET }}"
+
+      - name: setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
