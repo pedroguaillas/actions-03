@@ -6,3 +6,4 @@ This project is a simple application that runs on PORT 8080. It includes basic f
 ### Features
 - Runs the app on port 8080.
 - Includes automated testing to ensure functionality.
+- Run tests using Jest and Supertest.
