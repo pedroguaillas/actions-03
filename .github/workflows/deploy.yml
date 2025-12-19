@@ -3,7 +3,7 @@ name: Deploy
 on: push
 
 jobs:
-  first_job:
+  build:
     runs-on: ubuntu-latest
 
     services:
@@ -34,4 +34,12 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm test
+        run: npm run test
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        run: echo "Deploying application..."
