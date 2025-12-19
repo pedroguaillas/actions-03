@@ -40,7 +40,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-page-artefacts@v3
+        uses: actions/upload-pages-artefact@v3
         with:
           name: public/
 
